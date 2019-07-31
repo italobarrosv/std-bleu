@@ -7,3 +7,54 @@
 body
   margin 0
   padding 0
+
+// METRICAS
+
+$gap = 8px
+
+for number in (1 .. 8)
+  .mt-{number}
+    margin-top (number * $gap)
+  .mb-{number}
+    margin-bottom (number * $gap)
+  .ml-{number}
+    margin-left (number * $gap)
+  .mr-{number}
+    margin-right (number * $gap)
+
+  .mx-{number}
+    margin-left (number * $gap)
+    margin-right (number * $gap)
+
+  .my-{number}
+    margin-top (number * $gap)
+    margin-bottom (number * $gap)
+
+  .ma-{number}
+    margin-top (number * $gap)
+    margin-bottom (number * $gap)
+    margin-left (number * $gap)
+    margin-right (number * $gap)
+
+  .pt-{number}
+    padding-top (number * $gap)
+  .pb-{number}
+    padding-bottom (number * $gap)
+  .pl-{number}
+    padding-left (number * $gap)
+  .pr-{number}
+    padding-right (number * $gap)
+
+  .px-{number}
+    padding-left (number * $gap)
+    padding-right (number * $gap)
+
+  .py-{number}
+    padding-top (number * $gap)
+    padding-bottom (number * $gap)
+
+  .pa-{number}
+    padding-top (number * $gap)
+    padding-bottom (number * $gap)
+    padding-left (number * $gap)
+    padding-right (number * $gap)
