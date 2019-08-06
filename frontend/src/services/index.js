@@ -16,4 +16,4 @@ const api = () =>
     timeout: 60000
   })
 
-  export const getPrice = data => api().get('/getPrice', data)
+  export const getPrice = () => api().get('/')

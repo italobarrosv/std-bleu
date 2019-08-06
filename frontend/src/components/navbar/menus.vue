@@ -1,9 +1,15 @@
 <template>
   <div class="menu">
     <div v-for="(btn, id) in menu" :key="id" >
-      <button class="btn" :class="btn.class" :value="btn.value">
-        {{btn.name}}
-      </button>
+      <router-link :to="btn.action" :value="btn.value">
+        <button class="btn" :class="btn.class">{{btn.name}}</button>
+      </router-link>
+    </div>
+    <div>
+      <select class="flags" name="" id="">
+        <option value="BR"><i></i></option>
+        <option value="USA"><i></i></option>
+      </select>
     </div>
   </div> 
 </template>
@@ -12,7 +18,7 @@ export default {
   data: () => ({
     menu: [
     {id:0, name: 'Bleutest Buy', action: '', value: '', icon: '', class: 'btn__nav'},
-    {id:1, name: 'Compare', action: '', value: '', icon: '', class: 'btn__nav'},
+    {id:1, name: 'Compare', action: '/compare', value: '', icon: '', class: 'btn__nav'},
     {id:2, name: 'Remittance', action: '', value: '', icon: '', class: 'btn__nav'},
     {id:3, name: 'Exchanges', action: '', value: '', icon: '', class: 'btn__nav'},
     {id:4, name: `Exchanges'Fees`, action: '', value: '', icon: '', class: 'btn__nav'},
@@ -21,6 +27,12 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
+
+  .flags
+    text-decoration  none
+    background transparent
+    min-width 40px 
+    color var(--white)
 
   .btn
     cursor pointer

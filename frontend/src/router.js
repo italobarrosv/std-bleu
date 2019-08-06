@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Compare from './views/Compare'
 
 Vue.use(Router)
 
@@ -21,7 +22,7 @@ export default new Router({
     {
       path: '/compare',
       name: 'Compare',
-      component: Home
+      component: Compare
     },
     {
       path: '/',
