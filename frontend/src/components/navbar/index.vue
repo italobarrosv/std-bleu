@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar ">
+  <div class="navbar">
     <div class="navbar-itens">
       <div class="brand">
         <span class="logo">Bluetest</span>
@@ -18,7 +18,8 @@ export default {
 </script>
 <style lang="stylus" scoped>
   .brand
-    margin 18px 240px
+    margin 16px 16px 0px 0px
+    
   .logo
     color var(--white)
     font-weight 900
@@ -26,10 +27,10 @@ export default {
   .navbar-itens
     display flex
     flex-direction row
-    justify-content left
+    justify-content center
   .navbar
-    width 100%
     height 96px
+    width 100%
     background-color var(--primary)
 </style>
 

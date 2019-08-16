@@ -6,9 +6,9 @@
       </router-link>
     </div>
     <div>
-      <select class="flags" name="" id="">
-        <option value="BR"><i></i></option>
-        <option value="USA"><i></i></option>
+      <select class="flags-comp" name="" id="">
+        <option class="flags flags__br" value="BR">BRL</option>
+        <option class="flags flags__usd" value="USA">USA</option>
       </select>
     </div>
   </div> 
@@ -29,6 +29,16 @@ export default {
 <style lang="stylus" scoped>
 
   .flags
+    width 150px
+    color var(--secondary)
+    &__br
+      background-image url('../../assets/flags/brazil.svg')
+    &__usd
+      background-image url('../../assets/flags/united-states.svg')
+
+  .flags-comp
+    border solid 2px var(--white)
+    margin-top 16px
     text-decoration  none
     background transparent
     min-width 40px 
@@ -36,14 +46,17 @@ export default {
 
   .btn
     cursor pointer
-    margin 0px 16px
+    margin 8px 16px
     text-decoration none
-    font-size 1.1em
-    min-width 120px
-    min-height 56px
+    font-size 0.9em
+    min-width 46px
+    min-height 42px
     background transparent
     color var(--white)
     &__login
+      padding 0px
+      width 76px
+      height 42px
       font-weight bold
       border-radius 12px
       border  solid 3px var(--white)
