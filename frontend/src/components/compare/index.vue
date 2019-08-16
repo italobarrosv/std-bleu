@@ -4,19 +4,22 @@
       {{ lang.title }}
     </div>
     <div>
-      small text 
-      <button>click on the exchange row</button>
-      small text
+      <p>{{ lang.textCenterInit}}</p>
+      <button>{{ lang.buttonExchange }} </button>
+      <p> {{ lang.textCenterEnd }} </p>
     </div>
     <div class="btns__price">
-      <button>prices</button>
+      <verify-cota/>
     </div>
   </div>
 </template>
 <script>
 import langEn from '@/langs/en'
-import langPt from '@/langs/en'
+import langPt from '@/langs/pt'
 export default {
+  components: {
+    verifyCota: () => import('@/components/compare/verifyCota')
+  },
   computed: {
     lang() {
       if (this.$store.state.lang === 1) {
@@ -29,6 +32,12 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
+
+.title
+  color var(--secondary)
+  font-size 2.3em
+  margin 16px
+
 </style>
 
 
