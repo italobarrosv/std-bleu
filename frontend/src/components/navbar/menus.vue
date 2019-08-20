@@ -6,8 +6,8 @@
       </router-link>
     </div>
     <div>
-      <select class="flags-comp" name="" id="">
-        <option class="flags flags__br" value="BR">BRL</option>
+      <select v-model="selectValue" class="flags-comp" name="" id="" @change="alterLanguage(selectValue)">
+        <option class="flags flags__br" value="BR"><img src="./../../assets/flags/brazil.svg" alt="" width="120">BRL</option>
         <option class="flags flags__usd" value="USA">USA</option>
       </select>
     </div>
@@ -16,6 +16,7 @@
 <script>
 export default {
   data: () => ({
+    selectValue: 'BR',
     menu: [
     {id:0, name: 'Bleutest Buy', action: '', value: '', icon: '', class: 'btn__nav'},
     {id:1, name: 'Compare', action: '/compare', value: '', icon: '', class: 'btn__nav'},
@@ -23,7 +24,19 @@ export default {
     {id:3, name: 'Exchanges', action: '', value: '', icon: '', class: 'btn__nav'},
     {id:4, name: `Exchanges'Fees`, action: '', value: '', icon: '', class: 'btn__nav'},
     {id:5, name: 'Login', action: '', value: '', icon: '', class: 'btn__login'},]
-  })
+  }),
+  methods: {
+    alterLanguage(v) {
+      switch (v) {
+        case 'BR':
+          this.$store.dispatch('SET_LANG', 0)
+          break
+        case 'USA':
+          this.$store.dispatch('SET_LANG', 1)
+          break
+      }
+    },
+  }
 }
 </script>
 <style lang="stylus" scoped>
