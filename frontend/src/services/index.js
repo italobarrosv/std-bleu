@@ -5,7 +5,7 @@ const api = () =>
     baseURL: 'https://economia.awesomeapi.com.br/all/USD-BRL',
     headers: {
       'X-Requested-With': 'XMLHttpRequest',
-      Authorization: `Bearer ${store.state.token}`
+      Authorization: `Bearer`
     },
     transformResponse: [
       (data) => {
@@ -16,4 +16,4 @@ const api = () =>
     timeout: 60000
   })
 
-  export const getPrice = () => api().get('/')
+  export const apiGetPrice = () => api().get('/')

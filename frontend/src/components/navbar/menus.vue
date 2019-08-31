@@ -7,8 +7,8 @@
     </div>
     <div>
       <select v-model="selectValue" class="flags-comp" name="" id="" @change="alterLanguage(selectValue)">
-        <option class="flags flags__br" value="BR"><img src="./../../assets/flags/brazil.svg" alt="" width="120">BRL</option>
         <option class="flags flags__usd" value="USA">USA</option>
+        <option class="flags flags__br" value="BR"><img src="./../../assets/flags/brazil.svg" alt="" width="120">BRL</option>
       </select>
     </div>
   </div> 
@@ -16,7 +16,7 @@
 <script>
 export default {
   data: () => ({
-    selectValue: 'BR',
+    selectValue: 'USD',
     menu: [
     {id:0, name: 'Bleutest Buy', action: '', value: '', icon: '', class: 'btn__nav'},
     {id:1, name: 'Compare', action: '/compare', value: '', icon: '', class: 'btn__nav'},
